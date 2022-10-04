@@ -1,6 +1,23 @@
 let graph = {  a: ['c'], b: ['c'], c: ['s', 'r'], d: ['a'], s: ['a', 'c'], r: ['d'],
   z: ['z'] }
-export default function SolveGraph (graph, start, end ) {
+export default function SolveGraph (graph, start, end, /* visitados = [] */ ) {
+/*   console.log(start);
+  console.log(target);
+​
+  if(visitados.includes(start)) return false
+  visitados.push(start);
+  
+  for (const node of graph[start]) {
+    console.log(node);
+    //                        ^
+    if(node === target) return true
+    console.log(visitados);
+    //
+    if(SolveGraph(graph, node, target, visitados)) return true
+  }
+  return false
+ */
+
   let queue = [start]; //Juan Gerardo
     let visited = new Set();
     while (queue.length > 0) {
